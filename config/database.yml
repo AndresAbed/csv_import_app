@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  username: postgres
+  password: <%= ENV["db_password"] %>
+
+development:
+  <<: *default
+  database: csv_dev
+
+test:
+  <<: *default
+  database: csv_test

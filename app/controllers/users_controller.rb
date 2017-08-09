@@ -9,7 +9,7 @@ class UsersController < ApplicationController
         User.import(params[:csv])
         redirect_to root_url, notice: "Users imported."
       else
-        redirect_to root_url, notice: "Only csv files allowed"
+        redirect_to root_url, notice: "Only csv files allowed."
       end
     else
       redirect_to root_url, notice: "Please select a file."
